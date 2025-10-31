@@ -112,7 +112,7 @@
 
     const fakeAnimation = Math.floor(Math.random() * 1)
 
-    const fakeAnimationMode = Math.floor() * 5;
+    const fakeAnimationMode = Math.floor() * 10;
     // 0: Keine Sichtbare animation
     // 1: Statisches Weiterdrehen kurz vor Ende
 
@@ -122,7 +122,7 @@
       const duration = 4000; // 4 Sekunden
       const easing = 1 - Math.pow(1 - progress / duration, 3); // ease out cubic
 
-      if (fakeAnimationMode < 3) finalAngle = manipulatedAngle;
+      if (fakeAnimationMode < 7) finalAngle = manipulatedAngle;
 
       rotation = (progress < (duration - 800) || finalAngle == manipulatedAngle) ? finalAngle * easing : rotation + (angle * 0.1 * (1 - Math.pow(1 - rotation / manipulatedAngle, 3)));
 
